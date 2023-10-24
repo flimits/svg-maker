@@ -1,0 +1,7 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gray square background -->
+  <rect x="0" y="0" width="300" height="200" fill="gray" />
+  
+  <!-- Black letters "JAS" -->
+  <text x="100" y="100" font-family="Arial" font-size="30" fill="black">JAS</text>
+</svg>
