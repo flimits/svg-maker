@@ -58,7 +58,29 @@ inquirer
                 break; // Added break statement
         }
 
-        console.log("#####------########");
-        console.log(getInShape.shape);
-        console.log("whatShape is ", whatShape);
+        const theShapeOutput = getInShape.shape;
+
+        function writeToFile(whatShape, theShapeOutput) {
+            const fileName = "./examples/" + whatShape + ".svg";
+            console.log("the file name is " + fileName);
+
+            fs.writeFile(fileName, theShapeOutput, (err) => {
+                if (err) {
+                    console.error("Error writing to file:", err);
+                } else {
+                    console.log('Saved!');
+                }
+            });
+        }
+
+        writeToFile(whatShape, theShapeOutput);
+
+
+        // console.log("#####------########");
+        // console.log(getInShape.shape);
+        // console.log("#####------########");
+        // console.log(theShapeOutput);
+        // console.log("#####------########");
+        // console.log("whatShape is ", whatShape);
+        // console.log("#####------########");
     });
