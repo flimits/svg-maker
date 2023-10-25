@@ -1,3 +1,10 @@
+const { Rectangle, Circle, Triangle } = require('./lib/shapes');
+
+// const rect = new Rectangle("purple", "white", "jason");
+// const circ = new Circle("purple", "white", "jason");
+// const tri = new Triangle("purple", "white", "jason");
+
+const fs = require('fs');
 const inquirer = require('inquirer');
 
 inquirer
@@ -35,6 +42,26 @@ inquirer
         }
     ])
     .then(answers => {
-        console.info('Answer:', answers);
+        console.info('Answer:', answers.shape);
+        // console.info('The shape is' + answers.shape)
+
+        let getInShape;
+            switch (answers.shape) {
+                case 'circle':
+                     getInShape = new Circle(answers.shapeColor, answers.letterColor, answers.letters);
+                    break;
+                case 'rectangle':
+                     getInShape = new Rectangle(answers.shapeColor, answers.letterColor, answers.letters);
+                    break;
+                case 'triangle':
+                     getInShape = new Triangle(answers.shapeColor, answers.letterColor, answers.letters);
+            }
+
+            console.log("#####------########")
+       console.log(getInShape)
+        // const rect = new Rectangle("purple", "white", "jason");
+        // const circ = new Circle("purple", "white", "jason");
+        // const tri = new Triangle("purple", "white", "jason");
+
 
     });
