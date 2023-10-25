@@ -43,25 +43,22 @@ inquirer
     ])
     .then(answers => {
         console.info('Answer:', answers.shape);
-        // console.info('The shape is' + answers.shape)
+        const whatShape = answers.shape;
 
         let getInShape;
-            switch (answers.shape) {
-                case 'circle':
-                     getInShape = new Circle(answers.shapeColor, answers.letterColor, answers.letters);
-                    break;
-                case 'rectangle':
-                     getInShape = new Rectangle(answers.shapeColor, answers.letterColor, answers.letters);
-                    break;
-                case 'triangle':
-                     getInShape = new Triangle(answers.shapeColor, answers.letterColor, answers.letters);
-            }
+        switch (whatShape) {
+            case 'circle':
+                getInShape = new Circle(answers.shapeColor, answers.letterColor, answers.letters);
+                break;
+            case 'square':
+                getInShape = new Rectangle(answers.shapeColor, answers.letterColor, answers.letters);
+                break;
+            case 'triangle':
+                getInShape = new Triangle(answers.shapeColor, answers.letterColor, answers.letters);
+                break; // Added break statement
+        }
 
-            console.log("#####------########")
-       console.log(getInShape)
-        // const rect = new Rectangle("purple", "white", "jason");
-        // const circ = new Circle("purple", "white", "jason");
-        // const tri = new Triangle("purple", "white", "jason");
-
-
+        console.log("#####------########");
+        console.log(getInShape.shape);
+        console.log("whatShape is ", whatShape);
     });
