@@ -1,6 +1,92 @@
 # svg-maker
 This node application will dynamically create either a circle, square or rectangular svg image
 
+## Description and Motivation
+The following project is to create an application that will make SVG files. The file can contain the shapes of either a circle, square or a triangle. You will also add a color background to the shape as well as characters in the middle of it, and pick that color as well.
+
+It should looks something like this:
+
+![img](./examples/logo.svg)
+
+I built application with the thought and understanding that people could use a graphical genterator of basic shapes and have the opertunity to add colors for the shape and letters that you might want to put in there. It can eventually be expanded to build animations, add pictures or be used on someone's profile page.
+
+The coding here covers much of what we learned over the last week and applied so that it will be solidified in my mind.
+
+
+## Usage
+
+The way you use this Application is:
+- start up a commandline prompt in the directory of the cloned application.
+- Run NPM install to install any dependancies: `npm install`  // This will install packages withing the package.json file
+- Then execute the app with: `node index.js`  // This is the root of the running program.
+- There are also tests to be run on this project. It echecks the more important classes that build the SVG files.
+- To do this, you would `cd lib; npm run test`
+
+Here is a link to the video that was taken to show you the process I used to run this application.
+[Video of SVG Generator and Usage](https://watch.screencastify.com/v/8VTWFo4wkMpBOOnFfGIJ)
+
+## Table of Contents
+
+* [Technology Used](#technology-used)
+* [Repo Location](#repo)
+* [Screenshots of Application](screenshots-of-application)
+* [Learning Points](#learning-points)
+* [Code Snippets](#code-snippets)
+* [Contact Info](#contact-info)
+
+## Technology Used 
+
+| Technology Used         | Resource URL           | 
+| ------------- |:-------------:| 
+| Git | [https://git-scm.com/](https://git-scm.com/)     |    
+| Javascript | [https://developer.mozilla.org/en-US/docs/Web/JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+| Google Search | [https://www.google.com/](https://www.google.com/)
+| Stack Overflow | [https://stackoverflow.com/](https://stackoverflow.com/)
+| Digital Ocean for inquirer Help| [https://www.digitalocean.com/](https://www.digitalocean.com/)
+| W3Schools for JS | [https://www.w3schools.com/](https://www.w3schools.com/)
+| Dev for badges | [https://dev.to/cicirello/badges-tldr-for-your-repositorys-readme-3oo3](https://dev.to/cicirello/badges-tldr-for-your-repositorys-readme-3oo3)
+
+## Repo 
+
+[GitHub Repo](https://github.com/flimits/svg-maker)
+
+
+## Screenshots of Application
+---
+### main code
+![img](./examples/logooutput.png)
+---
+---
+### Classes
+![img](./examples/class%20parent%20and%20child%20.png)
+---
+
+
+## Learning Points 
+
+The appliation took everthing I could put into it. Painful to learn testing. Didn't like it, but rewarding when done.
+
+
+## Code Snippets
+---
+### Using the require statement in node.js
+
+The fist part of the application was to learn to require packages and libraries to run it. It will not run without them.
+// Include packages needed for this application
+const fs = require("fs");
+const inquirer = require('inquirer');
+Used test wisth jest
+
+
+
+
+## Contact Info
+
+| Name      |Email      | Github    | Portfolio |
+|-----------|-----------|-----------|-----------|
+|Jason       |flimits@gmail.com|https://github.com/flimits|https://github.com/flimits/my-portfolio/|
+
+
 
 ## Psuedo Coding
 
