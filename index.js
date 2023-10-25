@@ -1,9 +1,5 @@
 const { Rectangle, Circle, Triangle } = require('./lib/shapes');
 
-// const rect = new Rectangle("purple", "white", "jason");
-// const circ = new Circle("purple", "white", "jason");
-// const tri = new Triangle("purple", "white", "jason");
-
 const fs = require('fs');
 const inquirer = require('inquirer');
 
@@ -61,26 +57,18 @@ inquirer
         const theShapeOutput = getInShape.shape;
 
         function writeToFile(whatShape, theShapeOutput) {
-            const fileName = "./examples/" + whatShape + ".svg";
-            console.log("the file name is " + fileName);
+            // const fileName = "./examples/" + whatShape + ".svg"; // Originally wanted to save off file by shape, but ...
+            const fileName = "./examples/logo.svg";
+            console.log("The output file is located at " + fileName);
 
             fs.writeFile(fileName, theShapeOutput, (err) => {
                 if (err) {
                     console.error("Error writing to file:", err);
                 } else {
-                    console.log('Saved!');
+                    console.log('Generated logo.svg');
                 }
             });
         }
 
         writeToFile(whatShape, theShapeOutput);
-
-
-        // console.log("#####------########");
-        // console.log(getInShape.shape);
-        // console.log("#####------########");
-        // console.log(theShapeOutput);
-        // console.log("#####------########");
-        // console.log("whatShape is ", whatShape);
-        // console.log("#####------########");
     });
