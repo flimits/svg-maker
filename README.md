@@ -38,3 +38,5 @@ tests should test
 3.if a value is passed to class, it is set correctly.
 HINT !!!   test create an SVG !!!
 Check out the gitlabs folder for examples!!!
+
+"https://watch.screencastify.com/v/8VTWFo4wkMpBOOnFfGIJ"
