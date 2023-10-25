@@ -1,4 +1,4 @@
-const { Rectangle, Circle, Triangle } = require('./lib/shapes');
+const { Square, Circle, Triangle } = require('./lib/shapes');
 
 const fs = require('fs');
 const inquirer = require('inquirer');
@@ -47,7 +47,7 @@ inquirer
                 getInShape = new Circle(answers.shapeColor, answers.letterColor, answers.letters);
                 break;
             case 'square':
-                getInShape = new Rectangle(answers.shapeColor, answers.letterColor, answers.letters);
+                getInShape = new Square(answers.shapeColor, answers.letterColor, answers.letters);
                 break;
             case 'triangle':
                 getInShape = new Triangle(answers.shapeColor, answers.letterColor, answers.letters);
